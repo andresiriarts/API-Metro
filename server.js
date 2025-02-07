@@ -4,6 +4,8 @@ const cors = require('cors');
 
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 // Habilitar CORS
 app.use(cors());
 
@@ -30,6 +32,6 @@ app.get('/api/data', (req, res) => {
 });
 
 // Iniciar el servidor en el puerto 3000
-app.listen(3000, () => {
-  console.log('Servidor escuchando en http://localhost:3000');
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
